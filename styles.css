@@ -9,7 +9,12 @@ h1 {
     color: #FF0000;
     font-size: 50px;
     margin-bottom: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+.container {
+    margin-bottom: 20px;
+}
+
 select, button {
     font-size: 18px;
     padding: 10px;
@@ -17,5 +22,23 @@ select, button {
     border-radius: 5px;
     border: 2px solid #080808;
     background-color: #bfd3f3;
+}
+
+button {
+    cursor: pointer;
+}
+button:hover {
+    background-color: #669bf1;
+}
+
+.cat-box {
+    margin-top: 20px;
+}
+
+#catImage {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
