@@ -7,14 +7,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   <h>Cats</h> 
-   <nav>
-       <a href="Home">Home</a>
-       <a href="Breeds">Breeds</a>
-   </nav>
+   <h>Cat Generator</h>  
+   <div id="catContainer">
+    <label for="breedSelect">Select Breed:</label>
+    <select id="breedSelect">
+        <option value="">--Select a breed--</option>
+    </select>
+    <button id="generateBtn">Generate Cat</button>
+   </div> 
 
-
-
+   <div class="cat-box">
+    <img id="catImage" src="" alt="Random Cat" />
+   </div>
 
     <script src="script.js"></script>
 </body>
