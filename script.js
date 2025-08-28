@@ -1,40 +1,42 @@
 // Create Variables/ API
-const breedSelect = document.getElementById('breedSelect');
-const catImage = document.getElementById('catImage');
-const getCatBtn = document.getElementById('generateBtn');
-const breedInfo = document.getElementById('breedInfo');
 
-// Endpoint 1: Load breed endpoint and populate dropdown
-async function loadBreeds() {
-    const response = await fetch('https://api.thecatapi.com/v1/breeds');
-    const breeds = await response.json();
+// Old code before refactor
+// const breedSelect = document.getElementById('breedSelect');
+// const catImage = document.getElementById('catImage');
+// const getCatBtn = document.getElementById('generateBtn');
+// const breedInfo = document.getElementById('breedInfo');
+
+// // Endpoint 1: Load breed endpoint and populate dropdown
+// async function loadBreeds() {
+//     const response = await fetch('https://api.thecatapi.com/v1/breeds');
+//     const breeds = await response.json();
     
-    breeds.forEach(breed => {   
-        const option = document.createElement('option');
-        option.value = breed.id;
-        option.textContent = breed.name;
-        breedSelect.appendChild(option);
-    });
- }
+//     breeds.forEach(breed => {   
+//         const option = document.createElement('option');
+//         option.value = breed.id;
+//         option.textContent = breed.name;
+//         breedSelect.appendChild(option);
+//     });
+//  }
 
-// Endpoint 2: Fetch random cat image based on selected breed   
-async function getCat () {
-    const breedId = breedSelect.value;
-    let url = breedId
-    ? `https://api.thecatapi.com/v1/images/search?breed_ids=${breedId}`
-    : 'https://api.thecatapi.com/v1/images/search';
+// // Endpoint 2: Fetch random cat image based on selected breed   
+// async function getCat () {
+//     const breedId = breedSelect.value;
+//     let url = breedId
+//     ? `https://api.thecatapi.com/v1/images/search?breed_ids=${breedId}`
+//     : 'https://api.thecatapi.com/v1/images/search';
 
-const response = await fetch(url);
-const data = await response.json();
+// const response = await fetch(url);
+// const data = await response.json();
 
-catImage.src = data[0].url;
-breedInfo.textContent = breedId
-? `Breed: ${breedSelect.selectedOptions[0].text}`
-: 'Random Cat!';
-} 
+// catImage.src = data[0].url;
+// breedInfo.textContent = breedId
+// ? `Breed: ${breedSelect.selectedOptions[0].text}`
+// : 'Random Cat!';
+// } 
 
-// Event Listener
-getCatBtn.addEventListener('click', getCat);
+// // Event Listener
+// getCatBtn.addEventListener('click', getCat);
 
 
 // Shared API settings
@@ -51,7 +53,8 @@ async function fetchBreeds() {
 function initImagesPage() {
   const select = document.getElementById("breedSelect");
   const button = document.getElementById("generateBtn");
-  const img = document.getElementById("catImg");
+  const img = document.getElementById("catImgage");
+  const info = document.getElementById("breedInfo");
 
   // populate breeds dropdown
   fetchBreeds()
@@ -75,6 +78,11 @@ function initImagesPage() {
       .then(res => res.json())
       .then(data => {
         img.src = data[0].url;
+        if (info) {
+            info.textContent = select.value
+            ? `Breed: ${select.selectedOptions[0].text}`
+            : 'Random Cat!';
+        }
       })
       .catch(() => alert("Error loading image"));
   });
