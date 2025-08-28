@@ -1,10 +1,10 @@
 Cat Generator 
 
 A simple webpage that uses **The Cat API** to display random cat images
-and allow you to choose a breed.\
+and allow you to choose a breed.
 This project demonstrates fetching data from two API endpoints:
 
--   **`/v1/breeds`** → loads a list of cat breeds into a dropdown menu\
+-   **`/v1/breeds`** → loads a list of cat breeds into a dropdown menu
 -   **`/v1/images/search`** → retrieves cat images (optionally filtered
     by breed)
 
@@ -53,14 +53,14 @@ Breeds page (breeds.html)
 Requirements
 
 -   Internet connection (to fetch from [The Cat
-    API](https://thecatapi.com))\
+    API](https://thecatapi.com))
 -   A modern web browser (Chrome, Edge, Firefox, Safari)
 
 ------------------------------------------------------------------------
 Optional: Use an API Key
 
 You can sign up at [The Cat API](https://thecatapi.com) for a free API
-key if you want higher request limits.\
+key if you want higher request limits.
 If you get a key, open `script.js` and add it like this:
 
 ------------------------------------------------------------------------

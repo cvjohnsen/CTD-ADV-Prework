@@ -1,7 +1,7 @@
 body {
     text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, sans-serif;
-    background-color: #222222;
+    background-color: #343333;
     margin: 0;
     padding: 20px;
 }
@@ -19,16 +19,13 @@ p {
     margin-bottom: 20px;
 }
 
-.controls {
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f9f8f8;
+a {
+    color: #ffffff;
+    text-decoration: none;
 }
-
-.breedSelect {
-    margin-right: 10px;
+a:hover {
+    text-decoration: underline;
+    color: #FF0000;
 }
 
 select, button {
@@ -49,14 +46,25 @@ button:hover {
     background-color: #FF0000;
 }
 
-.cat-box {
-    margin-top: 20px;
-}
-
 #catImage {
     max-width: auto;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(250, 250, 250, 0.1);
+    color: #FFFFFF; 
+}
+.controls {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f8f8;
 }
 
+.breedSelect {
+    margin-right: 10px;
+}
+
+.cat-box {
+    margin-top: 20px;
+}
