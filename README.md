@@ -38,7 +38,7 @@ How to Run the Webpage
 4.  **Use the app**:
 
     -   Select a breed from the dropdown (or leave it as *Any breed*).\
-    -   Click the **Get Cat** button.\
+    -   Click the **Generate Cat** button.\
     -   A random cat image will appear, with breed info if available.
 
 ------------------------------------------------------------------------
