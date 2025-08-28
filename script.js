@@ -33,3 +33,9 @@ async function loadBreeds() {
     : "Random Cat!";
     }
 
+// Event Listener
+getCatBtn.addEventListener('click', getCat);
+
+// Initial Load
+loadBreeds();
+getCat();
